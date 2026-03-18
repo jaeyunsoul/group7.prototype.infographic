@@ -1,58 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Sliding Gallery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .imgBox {
+      display: none;
+      width: 300px;
+      margin: 10px;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Our Responses</h1>
-
-<button id="startSlide">Show Responses</button>
+<button id="startSlide">Our responses</button>
 
 <br><br>
 
-<div class="gallery">
-  <img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016972.png">
-  <p class="imgBox">Short Summary: our infographic is easy to follow and is organized well.</p>
+<img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016972.png">
+<p class="imgBox"> Short Summary: our infographic is easy to follow and is organized well. </p>
+<img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016975.png">
+<p class="imgBox"> Short Summary: The images helped most of our users, the text remains helpful to a small percentage. </p>
+<img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016977.png">
+<p class="imgBox"> Short Summary: According to their response, our prototype can help planning easier and will solve our problem (slow internet connection)</p>
+<img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016979.png">
+<p class="imgBox"> Short Summary: Our infographic's text is straightforward, therefore it is easy to follow</p>
+<img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016981.png">
+<p class="imgBox"> Short Summary: Four of the users thinks our plan covered the entire school's important rooms, while the other one responded with maybe. </p>
+<img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016983.png">
+<p class="imgBox"> Short Summary: Four people could understand some our texts, while the other user couldn't understand.</p>
+<img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016985.png">
+<p class="imgBox"> Short Summary: Our images and visuals helped present our plan better. </p>
+<img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016987.png">
+<p class="imgBox"> Short Summary: Four people saw our plan helpful and that it covers the entire school, while the other one thinks some of the rooms still needed more connection. </p>
+<img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016970.png">
+<p class="imgBox"> Short Summary: Three people appreciated the design of our infographic, while the other two agreed that it was good, which confirms that our prototype eye-catching.</p>
+<script>
+  $(document).ready(function(){
+    $("#startSlide").click(function(){
+      $(".imgBox").each(function(index){
+        $(this).delay(500 * index).slideDown(800);
+      });
+    });
+  });
+</script>
 
-  <img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016975.png">
-  <p class="imgBox">Short Summary: The images helped most users.</p>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 10px;
+  text-align: center;
+  background-color: #ADD8E6;
+  border: solid 1px #00008B;
+}
 
-  <img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016977.png">
-  <p class="imgBox">Short Summary: Our prototype helps planning and solves slow internet.</p>
-
-  <img class="imgBox" src="https://uploads.onecompiler.io/44cyrhw8k/44gqap3qb/1000016979.png">
-  <p class="imgBox">Short Summary: Text is easy to follow.</p>
-</div>
-
-<hr>
-
-<div id="flip">◇𝖿ᥱᥱძᑲᥲᥴks◇</div>
-<div id="panel">
-  <img src="https://uploads.onecompiler.io/44cyrhw8k/44gqdkavc/1000016988.png" width="500">
-  <p>
-    The feedback shows that our prototype has a clear idea, but it needs improvement 
-    in both design and function.
-  </p>
-</div>
-
-<hr>
-
-<img id="myImage" src="https://uploads.onecompiler.io/44cyrhw8k/44f8xzgwg/1000016211.png" width="400">
-
-<br><br>
-<button id="changeBtn">Change Image</button>
-
-<!-- JS -->
-<script src="script.js"></script>
+#panel {
+  padding: 100px;
+  display: none;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip" style="font-size:40px;">◇𝖿ᥱᥱძᑲᥲᥴks◇</div>
+<div id="panel"> <img src="https://uploads.onecompiler.io/44cyrhw8k/44gqdkavc/1000016988.png" alt="response" width="500"height="300" class="center">
+<p style="font-size:30px;"> The feedback shows that our prototype has a clear idea, but it needs improvement in both design and function. Many suggested making the text bigger, clearer, and less pixelated, as well fixing spacing and adding better labels for easier understanding. Overall, these suggestions will help us improve our prototype to be more readable, practical, and effective.</p> </div>
 
 </body>
 </html>
+<img id="myImage" src="https://uploads.onecompiler.io/44cyrhw8k/44f8xzgwg/1000016211.png" alt="Image" width="600" height="600">
+
+<button id="changeBtn">Change Image</button>
+
+<script>
+$("#changeBtn").click(function() {
+    $("#myImage").attr("src", "https://uploads.onecompiler.io/44cyrhw8k/44gqkypvd/1000016989.png");
+});
+</script>
