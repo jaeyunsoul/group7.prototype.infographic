@@ -1,0 +1,29 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+.imgBox {
+  display: none;
+  width: 300px;
+  margin: 10px auto;
+}
+
+#flip {
+  padding: 10px;
+  font-size: 30px;
+  background-color: #ADD8E6;
+  border: solid 1px #00008B;
+  cursor: pointer;
+}
+
+#panel {
+  padding: 20px;
+  display: none;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
